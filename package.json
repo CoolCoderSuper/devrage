@@ -17,5 +17,9 @@
   "devDependencies": {
     "@types/bun": "latest",
     "typescript": "latest"
+  },
+  "dependencies": {
+    "@opentui/solid": "0.2.6",
+    "solid-js": "1.9.12"
   }
 }

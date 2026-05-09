@@ -19,5 +19,17 @@ export type ScanOptions = MessageOptions & { agent?: string; by?: GroupBy };
 export type CountMap = Record<string, number>;
 export type VariantTally = Record<string, CountMap>;
 export type AgentStats = { messages: number; swears: number };
+export type GroupReport = AgentStats & { name: string; rate: number };
+export type WordReport = { group: string; count: number; variants: { word: string; count: number }[] };
+export type SessionReport = { sessions: number; sessionsWithSwears: number; rate: number };
+export type ScanReport = {
+  groupBy: GroupBy;
+  totalMessages: number;
+  totalSwears: number;
+  groups: GroupReport[];
+  groupsBy: Record<GroupBy, GroupReport[]>;
+  topWords: WordReport[];
+  sessions: SessionReport | null;
+};
 export type SqliteDatabase = InstanceType<typeof Database>;
 export type CursorContext = { session?: string; project?: string; timestamp?: string; since?: Date; model?: string };
