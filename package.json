@@ -3,11 +3,15 @@
   "version": "0.0.3",
   "type": "module",
   "bin": {
-    "devrage": "./devrage.ts"
+    "devrage": "./index.ts"
   },
+  "files": [
+    "index.ts",
+    "src"
+  ],
   "scripts": {
-    "start": "bun run devrage.ts",
-    "dev": "bun run devrage.ts",
+    "start": "bun run index.ts",
+    "dev": "bun run index.ts",
     "check": "bunx tsc --noEmit"
   },
   "devDependencies": {
