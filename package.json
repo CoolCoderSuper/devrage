@@ -1,0 +1,17 @@
+{
+  "name": "devrage",
+  "version": "0.0.3",
+  "type": "module",
+  "bin": {
+    "devrage": "./devrage.ts"
+  },
+  "scripts": {
+    "start": "bun run devrage.ts",
+    "dev": "bun run devrage.ts",
+    "check": "bunx tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "latest"
+  }
+}
